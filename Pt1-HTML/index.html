@@ -10,36 +10,38 @@
 </head>
 
 <body>
-    <h1>This is a huge header</h1>
-    <h2>This one's a little smaller...</h2>
-    <h3>And smaller still...</h3>
-    <h4>And so on...</h4>
-    <h5>Yep, still going...</h5>
-    <h6>Made it!!</h6>
+    <div>
+        <form action="">
+            <input type="text"  name="name" placeholder="Name">
+            <br /><br />
+            <input type="email" name="email" placeholder="Email Address">
+            <br /><br />
+            <textarea name="comments" id="" cols="20" rows="10" placeholder="Comments..."></textarea>
+            <br><br>
+            <select name="options" id="">
+                <option>Select an Option...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <br><br>
+            <input type="radio" name="color" />Red
+            <input type="radio" name="color" />White
+            <input type="radio" name="color" />Blue
+        
+            <br><br>
 
-    <p>My first line goes here.<br />Extra text!! </p>
-    <hr />
-    <p>A second line goes here.</p>
+            <input type="checkbox" checked="checked" value="1"> Dog
+            <input type="checkbox" value="2"> Cat
+            <input type="checkbox" value="3"> Fish
+            <input type="checkbox" value="4"> Lizard 
 
-    <p><strong>This is a bold piece of text.</strong>  This word will be in <em>italics</em>. I want this word to be <u>underlined</u>. This line is <strike>struck through</strike>.</p>
+            <br><br>
+            <input type="submit" value="Submit">
 
-    <h2>My Favorite Foods</h2>
-    <ul>
-        <li>Pizza</li>
-        <li>Chocolate</li>
-        <li>Curry</li>
-    </ul>
-    
-    <h2>Team Rankings</h2>
-    <ol>
-        <li>Baylor Bears</li>
-        <li>Seattle Seahawks</li>
-        <li>Dallas Cowboys</li>
-    </ol>
 
-    <img src="images/Uniform-BU.png" alt="BU Uniforms" width="200" height="100"> <br><br>
-    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Baylor_University_Athletics_%28logo%29.svg/100px-Baylor_University_Athletics_%28logo%29.svg.png" alt="Interlocking BU Image" width="200" height="100">
-
+        </form>
+    </div>
 
 
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
