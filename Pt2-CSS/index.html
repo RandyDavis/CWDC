@@ -4,14 +4,27 @@
   <meta charset="UTF-8">
   <title>Pt2-CSS Styling</title>
   <style>
-    p {
+    .large {
+      font-size: 300%;
+    }
+
+    #green {
       color: green;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+
+    .bold {
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <p>This is some text.</p>
-  <p>This is some more text.</p>
+  <p class="large">This is some text.</p>
+  <p id="green" class="large">This is some more text.</p>
+  <p>The third <span class="underline large bold">word</span> in this paragraph is underlined.</p>
 
 
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
