@@ -24,33 +24,42 @@
       background-color: #9F81F7;
       width: 200px;
       height: 200px;
-      float: left;
+      position: fixed;
+      left: 100px;
+      z-index: 1;
     }
 
     .greenbox {
       background-color: #49E05B;
       width: 300px;
-      height: 100px;
-      float: right;
+      height: 500px;
+      /*position: absolute;*/
+      z-index: 2;
     }
 
-    .floatleft {
-      float: left;
-    }
-
-    .clear {
-      clear: right;
-    }
+    
   </style>
 </head>
 <body>
-  
+
   <div class="purplebox">
     
     <p class="large">This is some text.</p>
 
   </div>
 
+  <div class="greenbox">
+    <p id="green" class="large">This is some more text.</p>  
+  </div>
+  <div class="greenbox">
+    <p id="green" class="large">This is some more text.</p>  
+  </div>
+  <div class="greenbox">
+    <p id="green" class="large">This is some more text.</p>  
+  </div>
+  <div class="greenbox">
+    <p id="green" class="large">This is some more text.</p>  
+  </div>
   <div class="greenbox">
     <p id="green" class="large">This is some more text.</p>  
   </div>
