@@ -8,35 +8,21 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    .bold {
-      font-weight: bold;
+    a:visited {
       color: green;
-      font-size: 1.2em;
     }
 
-    .italic {
-      font-style: italic;
-    }
+    a:hover, a:focus {
+      /*color: red;*/
+      top:-1px;
+      position: relative;
 
-    .underline {
-      text-decoration: underline;
-    }
-
-    .greenbox {
-      width: 300px;
-      height: 50px;
-      background-color: green;
-      text-align: justify;
     }
   </style>
 </head>
 <body>
 
-  <div class="greenbox"> 
-    <p>This is some text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem odit in obcaecati, laudantium nihil minima ipsum excepturi quam, eaque.</p>  
-  </div>
-  <p class="bold">This is some bold text.</p>  
-  <p class="italic">This is some <span class="underline">italic</span> text.</p>  
+  <a href="http://google.com" target="_blank">Google</a>
 
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
