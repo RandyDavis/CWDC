@@ -87,7 +87,63 @@
       background-position: right center;
     }
 
+    #newsBar {
+      width: 100%;
+      background-color: #990000;
+      height: 90px;
+      color: white;
+    }
+
+    #newsBar p {
+      margin: 0;
+      padding: 0;
+      padding-top: 15px;
+      float: left;
+    }
+
+    #newsheader {
+      font-size: 3em;
+    }
+
+    #uk {
+      font-size: .7em;
+      padding-left: 5px;
+    }
+
+    .clearfix {
+      clear: both;
+    }
+
+    #rss {
+      float: right;
+      margin-top: 38px;
+    }
     
+    #rss img {
+      height: 14px;
+    }
+
+
+    #topicmenu {
+
+    }
+
+    #topicmenu ul {
+      background-color: #3e0c0d;
+      padding: 5px 0 0 5px;
+      margin: 0;
+      height: 20px;
+    }
+
+    #topicmenu li {
+      list-style: none;
+      font-size: 0.8em;
+      border-right: 1px solid white;
+      float: left;
+      padding: 0 6px 0 6px;
+      background-color: none;
+    }
+
   </style>
 </head>
 <body>
@@ -119,7 +175,35 @@
         </div>
       </div>
     </div>
-    <div id="secondBar"></div>
+    <div class="clearfix"></div>
+    <div id="newsBar">
+      <div class="fixed-width">
+        <p id="newsheader">NEWS <span id="uk">UK</span></p>
+        <div id="rss">
+          RSS <img src="images/rss.png" alt="RSS Logo">
+        </div>
+        <div class="clearfix"></div>
+        <div id="topicmenu">
+          <ul>
+            <li>Home</li>
+            <li>US & Canada</li>
+            <li>Latin America</li>
+            <li>UK</li>
+            <li>Africa</li>
+            <li>Asia</li>
+            <li>Australia</li>
+            <li>Europe</li>
+            <li>Mid-East</li>
+            <li>Business</li>
+            <li>Health</li>
+            <li>Sci/Entertainment</li>
+            <li>Tech</li>
+            <li>Entertainment</li>
+            <li>Video</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
   
 
