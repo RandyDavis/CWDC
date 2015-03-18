@@ -138,10 +138,19 @@
     #topicmenu li {
       list-style: none;
       font-size: 0.8em;
-      border-right: 1px solid white;
+      border-right: 1px solid #990000;
       float: left;
       padding: 0 6px 0 6px;
       background-color: none;
+    }
+
+    .selected {
+      background-color: #ededed;
+      color: #505050;
+      height: 20px;
+      position: relative;
+      top: -5px;
+      padding-top: 5px !important;
     }
 
   </style>
@@ -188,7 +197,7 @@
             <li>Home</li>
             <li>US & Canada</li>
             <li>Latin America</li>
-            <li>UK</li>
+            <li class="selected">UK</li>
             <li>Africa</li>
             <li>Asia</li>
             <li>Australia</li>
@@ -199,7 +208,7 @@
             <li>Sci/Entertainment</li>
             <li>Tech</li>
             <li>Entertainment</li>
-            <li>Video</li>
+            <li style="border-right: none;">Video</li>
           </ul>
         </div>
       </div>
