@@ -6,9 +6,15 @@
 </head>
 <body>
   <button onclick='alert("Hi")'>Click Me!</button>
+  
+  <p id="text">Some Text</p>
 
   <script type="text/javascript">
-    alert("YO!");
+    // This is a comment
+    alert(document.getElementById('text').innerHTML="Some More Text");
   </script>
+
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
 </body>
 </html>
