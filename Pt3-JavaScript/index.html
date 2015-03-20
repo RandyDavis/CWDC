@@ -5,14 +5,29 @@
   <title>Pt3-JavaScript: Learning JS</title>
 </head>
 <body>
-  <button id="myButton">Click Me Hard</button>
+  <button id="textChanger">Click Me Hard</button>
   
-  <p id="text">Some Text</p>
+  <div id="firstDiv">Button Has Not Been Pressed</div>
+
+  <button id="textAppender">Append some text</button>
+
+  <div id="secondDiv">Javascript is ....</div>
+
+  <button id="textCreator">Create Text</button>
+
+  <div id="emptyDiv"></div>
 
   <script type="text/javascript">
-    // This is a comment
-    document.getElementById('myButton').onclick = function() {
-      alert('Ouch!');
+    document.getElementById('textChanger').onclick = function() {
+      document.getElementById('firstDiv').innerHTML="Button Has Already Been Pressed!";
+    }
+
+    document.getElementById('textAppender').onclick = function() {
+      document.getElementById('secondDiv').innerHTML = document.getElementById('secondDiv').innerHTML + "great!";
+    }
+
+    document.getElementById('textCreator').onclick = function() {
+      document.getElementById('emptyDiv').innerHTML = "<ul><li>Cat</li><li>Dog</li><ul>";
     }
   </script>
 
