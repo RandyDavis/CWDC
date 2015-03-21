@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Pt3-JavaScript: Learning JS</title>
+  <style>
+    #red-circle {
+      height: 200px;
+      width: 200px;
+      background-color: red;
+      border-radius: 100%;
+    }
+  </style>
 </head>
 <body>
   <button id="textChanger">Click Me Hard</button>
@@ -17,6 +25,8 @@
 
   <div id="emptyDiv"></div>
 
+  <div id="red-circle"></div>
+
   <script type="text/javascript">
     document.getElementById('textChanger').onclick = function() {
       document.getElementById('firstDiv').innerHTML="Button Has Already Been Pressed!";
@@ -28,6 +38,10 @@
 
     document.getElementById('textCreator').onclick = function() {
       document.getElementById('emptyDiv').innerHTML = "<ul><li>Cat</li><li>Dog</li><ul>";
+    }
+
+    document.getElementById('red-circle').onclick = function() {
+      document.getElementById('red-circle').style.display = 'none';
     }
   </script>
 
