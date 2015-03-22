@@ -3,83 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Pt3-JavaScript: Learning JS</title>
-  <style>
-    #red-circle {
-      height: 200px;
-      width: 200px;
-      background-color: red;
-      border-radius: 100%;
-    }
-  </style>
+
 </head>
 <body>
 
-  <!-- <input type="text" id="myInput" value="test"> -->
-  <button id="stylesChanger">Change the text!</button>
-  
-  <div id="firstDiv">Random Text</div>
+  <p>What is the weather like?</p>
+  <input type="text" id="weather">
+  <button id="myButton">Submit</button>
 
-  <!-- <button id="textAppender">Append some text</button>
 
-  <div id="secondDiv">Javascript is ....</div>
+  <script>
+    var x = 99;
 
-  <button id="textCreator">Create Text</button>
-
-  <div id="emptyDiv"></div>
-
-  <div id="red-circle"></div> -->
-
-  <script type="text/javascript">
-
-  var myArray = new Array();
-
-  myArray[0] = "pizza";
-  myArray[1] = "chocolate";
-  
-  console.log(myArray);
-
-  var myOtherArray = ["rain", "sunshine"];
-  // add an element to the array
-  myOtherArray.push("snow");
-  // remove elements from the array from any position in the array
-  // myOtherArray.splice(1, 2);
-  // console.log(myOtherArray);
-
-  // add elements to the array at a desired position
-  myOtherArray.splice(2, 0, "hail", "cloudy");
-  console.log(myOtherArray);
-
-  // how to find the length of an array
-  console.log(myOtherArray.length);
-
-    document.getElementById('stylesChanger').onclick = function() {
-      document.getElementById('firstDiv').innerHTML=myArray[1];
+    if (x == 1) {
+      console.log("x is 1!");
+    } else {
+      console.log("x is not 1!");
     }
 
 
-    // var newText = document.getElementById('firstDiv').value;
+    document.getElementById("myButton").onclick = function() {
+      var weatherSubmit = document.getElementById("weather").value;
+      if (weatherSubmit == "rain") {
+        console.log("it's raining!");
+      } else {
+        console.log("it's not raining!");
+      }
+    }
 
-    // document.getElementById('stylesChanger').onclick = function() {
-    //   newText = document.getElementById("myInput").value;
-    //   document.getElementById('firstDiv').innerHTML=newText;
-    // }
-
-    // document.getElementById('textChanger').onclick = function() {
-    //   document.getElementById('firstDiv').innerHTML="Button Has Already Been Pressed!";
-    // }
-
-    // document.getElementById('textAppender').onclick = function() {
-    //   document.getElementById('secondDiv').innerHTML = document.getElementById('secondDiv').innerHTML + "great!";
-    // }
-
-    // document.getElementById('textCreator').onclick = function() {
-    //   document.getElementById('emptyDiv').innerHTML = "<ul><li>Cat</li><li>Dog</li><ul>";
-    // }
-
-    // document.getElementById('red-circle').onclick = function() {
-    //   document.getElementById('red-circle').style.display = 'none';
-    // }
-  </script>
+  </script>  
 
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
