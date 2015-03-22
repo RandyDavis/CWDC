@@ -13,11 +13,13 @@
   </style>
 </head>
 <body>
-  <button id="textChanger">Click Me Hard</button>
-  
-  <div id="firstDiv">Button Has Not Been Pressed</div>
 
-  <button id="textAppender">Append some text</button>
+  <input type="text" id="myInput" value="test">
+  <button id="stylesChanger">Change the text!</button>
+  
+  <div id="firstDiv">Random Text</div>
+
+  <!-- <button id="textAppender">Append some text</button>
 
   <div id="secondDiv">Javascript is ....</div>
 
@@ -25,24 +27,32 @@
 
   <div id="emptyDiv"></div>
 
-  <div id="red-circle"></div>
+  <div id="red-circle"></div> -->
 
   <script type="text/javascript">
-    document.getElementById('textChanger').onclick = function() {
-      document.getElementById('firstDiv').innerHTML="Button Has Already Been Pressed!";
+
+    var newText = document.getElementById('firstDiv').value;
+
+    document.getElementById('stylesChanger').onclick = function() {
+      newText = document.getElementById("myInput").value;
+      document.getElementById('firstDiv').innerHTML=newText;
     }
 
-    document.getElementById('textAppender').onclick = function() {
-      document.getElementById('secondDiv').innerHTML = document.getElementById('secondDiv').innerHTML + "great!";
-    }
+    // document.getElementById('textChanger').onclick = function() {
+    //   document.getElementById('firstDiv').innerHTML="Button Has Already Been Pressed!";
+    // }
 
-    document.getElementById('textCreator').onclick = function() {
-      document.getElementById('emptyDiv').innerHTML = "<ul><li>Cat</li><li>Dog</li><ul>";
-    }
+    // document.getElementById('textAppender').onclick = function() {
+    //   document.getElementById('secondDiv').innerHTML = document.getElementById('secondDiv').innerHTML + "great!";
+    // }
 
-    document.getElementById('red-circle').onclick = function() {
-      document.getElementById('red-circle').style.display = 'none';
-    }
+    // document.getElementById('textCreator').onclick = function() {
+    //   document.getElementById('emptyDiv').innerHTML = "<ul><li>Cat</li><li>Dog</li><ul>";
+    // }
+
+    // document.getElementById('red-circle').onclick = function() {
+    //   document.getElementById('red-circle').style.display = 'none';
+    // }
   </script>
 
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
