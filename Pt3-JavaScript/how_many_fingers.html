@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pt3-JavaScript: Learning JS - How Many Fingers</title>
+</head>
+<body>
+	
+	<p>How many fingers am I holding up?</p>
+	<input type="text" id="answer">
+	<button id="myButton">Submit</button>
+
+	<script>
+	var x = Math.random();
+	x = 11 * x;
+
+	x = Math.floor(x);
+	console.log(x);
+	
+	document.getElementById("myButton").onclick = function() {
+		if (document.getElementById('answer').value == x) {
+			console.log(x + " is the correct number!  Good Job!");
+		} else {
+			console.log("Try Again!");
+		}
+	}
+
+
+	</script>
+
+
+
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
