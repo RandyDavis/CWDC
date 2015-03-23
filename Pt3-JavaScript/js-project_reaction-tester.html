@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pt3-JavaScript: Learning JS - Reaction Tester Project</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div id="box"></div>
+
+
+	<script>
+		function makeBox() {
+			var time = Math.random();
+			time = time * 5000;
+			setTimeout(function() {
+				document.getElementById("box").style.display="block";
+			}, time);
+		}
+
+		document.getElementById("box").onclick = function() {
+			document.getElementById("box").style.display="none";
+			makeBox();	
+		}
+
+		makeBox();
+
+	</script>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
