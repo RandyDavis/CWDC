@@ -5,23 +5,69 @@
 	<title>Pt3-JavaScript: Learning JS - Loops</title>
 </head>
 <body>
-	<p id="arrayString"></p>
-	<input id="answer" type="text">
-	<button id="myButton">Submit</button>
+	<p>How many fingers are you holding up?</p>
+
+	<input id="myNumber" type="text">
+	<button id="guess">Guess!</button>
 
 	<script>
 
-		var arrayString = "";
 
-		var myArray = ["pizza", "wine", "mints"];
+		// For Loop Example
+		// var arrayString = "";
 
-		for (var i = 0; i < myArray.length; i++) {
-			console.log(myArray[i]);
+		// var myArray = ["pizza", "wine", "mints"];
 
-			arrayString = arrayString + myArray[i] + " ";
-			document.getElementById("arrayString").innerHTML=arrayString;
+		// for (var i = 0; i < myArray.length; i++) {
+		// 	console.log(myArray[i]);
+
+		// 	arrayString = arrayString + myArray[i] + " ";
+		// 	document.getElementById("arrayString").innerHTML=arrayString;
+		// }
+
+
+		// While Loop Example
+		// var arrayString = "";
+		// var myArray = ["pizza", "wine", "mints"];
+
+		// var i = 0;
+
+		// while (i < myArray.length) {
+		// 	arrayString = arrayString + myArray[i] + " ";
+		// 	i++;
+		// }
+		// document.getElementById("arrayString").innerHTML= arrayString;
+
+		// Computer guess finger game
+		document.getElementById("guess").onclick = function() {
+			var gotIt = false; var guesses = 1; var x;
+
+			while (gotIt == false) {
+				
+					x = Math.random();
+
+					x = 6*x;
+
+					x = Math.floor(x);
+					
+					if (guesses <= 5) {
+						if (document.getElementById("myNumber").value == x) {
+							gotIt = true;
+							console.log("x is: " + x);
+						} else {
+								console.log("x is: " + x);
+								console.log("Wrong, try again! Your wrong number of guesses are at: " + guesses++);
+						}
+					} 
+					else {
+						gotIt = true;
+						console.log("You took too many guesses and we have stopped the game!");
+					}
+
+				}
+
+			console.log("Got it, it was a " + x + ".  It only took me " + guesses + " guesses!");
 		}
-
 	</script>
 
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
