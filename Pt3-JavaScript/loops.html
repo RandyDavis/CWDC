@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pt3-JavaScript: Learning JS - Loops</title>
+</head>
+<body>
+	<p id="arrayString"></p>
+	<input id="answer" type="text">
+	<button id="myButton">Submit</button>
+
+	<script>
+
+		var arrayString = "";
+
+		var myArray = ["pizza", "wine", "mints"];
+
+		for (var i = 0; i < myArray.length; i++) {
+			console.log(myArray[i]);
+
+			arrayString = arrayString + myArray[i] + " ";
+			document.getElementById("arrayString").innerHTML=arrayString;
+		}
+
+	</script>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
