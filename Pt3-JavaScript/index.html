@@ -3,55 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Pt3-JavaScript: Learning JS</title>
-  <style>
-    #red-circle {
-      height: 200px;
-      width: 200px;
-      background-color: red;
-      border-radius: 100%;
-    }
-  </style>
+
 </head>
 <body>
-  <input type="text" id="myInput" value="test" />
-  <button id="stylesChanger">Change the text!</button>
-  <div id="firstDiv">This is some text</div>
-  
+
+  <p>What is the weather like?</p>
+  <input type="text" id="weather">
+  <button id="myButton">Submit</button>
 
 
-  <!-- <button id="textAppender">Append some text</button> -->
+  <script>
+    var x = 99;
 
-  <!-- <div id="secondDiv">Javascript is ....</div> -->
-
-  <!-- <button id="textCreator">Create Text</button> -->
-
-  <!-- <div id="emptyDiv"></div> -->
-
-  <!-- <div id="red-circle"></div> -->
-
-  <script type="text/javascript">
-
-    var divId = "firstDiv";
-    var newText = document.getElementById('myInput').value;
-    document.getElementById('stylesChanger').onclick = function() {
-      newText = document.getElementById('myInput').value;
-      document.getElementById('firstDiv').innerHTML=newText;
+    if (x == 1) {
+      console.log("x is 1!");
+    } else {
+      console.log("x is not 1!");
     }
 
 
-    // document.getElementById('textChanger').onclick = function() {
-    //   document.getElementById();
-    // }
+    document.getElementById("myButton").onclick = function() {
+      var weatherSubmit = document.getElementById("weather").value;
+      if (weatherSubmit == "rain") {
+        console.log("it's raining!");
+      } else {
+        console.log("it's not raining!");
+      }
+    }
 
-    // document.getElementById('textAppender').onclick = function() {
-    //   document.getElementById('secondDiv').innerHTML = document.getElementById('secondDiv').innerHTML + "great!";
-    // }
-
-    // document.getElementById('textCreator').onclick = function() {
-    //   document.getElementById('emptyDiv').innerHTML = "<ul><li>Cat</li><li>Dog</li><ul>";
-    // }
-
-  </script>
+  </script>  
 
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
