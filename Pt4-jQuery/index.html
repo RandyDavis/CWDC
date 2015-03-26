@@ -8,24 +8,22 @@
 </head>
 <body>
 
-  <div class="redSquare"></div>
-  <div class="redSquare"></div>
   <div id="greenCircle"></div>
+
+  <p>This is some text.</p>
+
+  <iframe src="http://www.cnn.com" frameborder="0"></iframe>
   
   <script>
    
-    $("#greenCircle").click(function() {
-      alert('circle clicked!');
+    $("#greenCircle").hover(function() {
+      $("iframe").attr("src", "http://www.ecowebhosting.co.uk");
     });
 
-    $(".redSquare").click(function() {
-      alert('square clicked fool!');
-    });
-
-    $("div").click(function() {
-      alert("You clicked on a div!");
+    $("#greenCircle").hover(function() {
+      $("p").html("Hovering over the circle!");
     })
-   
+
 
 
   </script>
