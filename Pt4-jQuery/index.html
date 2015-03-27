@@ -8,19 +8,28 @@
 </head>
 <body>
 
-  <div id="greenCircle"></div>
+  <!-- <div id="greenCircle"></div> -->
+  <!-- <div class="redSquare"></div>
+  <div class="redSquare"></div> -->
 
-  <div class="redSquare"></div>
-  <div class="redSquare"></div>
+  <p id="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias facere ut magni perspiciatis veritatis voluptatem fugit doloremque pariatur aliquam itaque voluptatum est voluptas repellendus, non, facilis error laborum, quia at corporis provident vitae repudiandae neque porro. Assumenda voluptate hic magnam consectetur, aperiam veritatis distinctio commodi!</p>
+  <button id="fadeOutText">Watch Text Disappear!</button>
+  <button id="fadeInText">Watch Text Reappear!</button>
+
+
 
   
   <script>
-   
-    $("#greenCircle").click(function() {
-      $(".redSquare").fadeOut();
+
+    $("#fadeOutText").click(function() {
+      $("#lorem").fadeOut("slow", function() {
+        console.log("Fade Out Complete!");
+      });
     });
 
-
+    $("#fadeInText").click(function() {
+      $("#lorem").fadeIn();
+    })
 
 
   </script>
