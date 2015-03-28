@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pt4 - jQuery: Form Validation</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jQuery_v1.11.2.min.js"></script>
+  <script>
+    console.log("File Running is: " + $("title").html());
+  </script>
+</head>
+<body>
+  <div id="container">
+
+  <div id="error"></div>
+
+    <form action="" id="validationForm">
+    
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" placeholder="joe_jones@example.com">
+
+      <label for="phone">Phone Number:</label>
+      <input type="phone" id="phone">
+
+      <label for="password1">Password:</label>
+      <input type="password" id="password1">
+
+      <label for="password2">Confirm Password:</label>
+      <input type="password" id="password2">
+
+      <input id="submitButton" type="submit" value="Submit">
+
+    </form>
+  </div>
+    
+  
+  <script>
+    $("#validationForm").submit(function(e) {
+      var errorMessage = "";
+      e.preventDefault();
+      
+      function isValidEmailAddress(emailAddress) {
+        var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+        return pattern.test(emailAddress);
+      };
+
+      if(!isValidEmailAddress($("#email").val())) {
+        errorMessage= "Please enter a valid email address!";
+      }
+
+      if(!$.isNumeric($("#phone").val())) {
+        errorMessage= errorMessage +='<br />' + "Please enter a valid phone number!";
+      }
+
+      if($("#password1").val() != $("#password2").val()) {
+        errorMessage= errorMessage += '<br />' + "Please enter matching passwords!";
+      }
+      
+      if(errorMessage == "") {
+        var success = "<div id='success'><p>Thanks for your submission!  We will be in touch!</p></div>";
+        $("#container").html(success)
+      } else {
+        $("#error").html(errorMessage);     
+      }
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
