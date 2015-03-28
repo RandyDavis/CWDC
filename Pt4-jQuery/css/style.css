@@ -62,3 +62,21 @@ input {
   width: 200px;
   background-color: yellow;
 }
+
+#greenSquare {
+  margin: 10px;
+  border: 1px solid grey;
+  height: 200px;
+  width: 200px;
+  color: white;
+  background-color: green;
+}
+
+#resizable {
+  margin: 10px;
+  border: 1px solid grey;
+  height: 200px;
+  width: 200px;
+  color: black;
+  background-color: lightblue;
+}

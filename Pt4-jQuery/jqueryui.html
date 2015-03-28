@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Pt4 - jQuery: jQuery UI</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
   <script src="js/jQuery_v1.11.2.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
   <script>
@@ -12,11 +13,15 @@
 </head>
 <body>
 
-  <div id="square"></div>
+  <!-- <div id="square"></div> -->
+  <div id="greenSquare">Drag Me Around!</div>
+  <div id="resizable">Resize Me!</div>
   
   <script>
-    $("#square").draggable();
+    // $("#square").draggable();
+    $("#greenSquare").draggable();
 
+    $("#resizable").resizable();
   </script>
 
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
