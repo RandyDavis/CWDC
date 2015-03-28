@@ -54,3 +54,11 @@ input {
   margin-top: 80px;
   padding-left: 10px;
 }
+
+#square {
+  margin: 10px;
+  border: 1px solid grey;
+  height: 200px;
+  width: 200px;
+  background-color: yellow;
+}
