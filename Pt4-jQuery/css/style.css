@@ -57,7 +57,7 @@ input {
 
 #square {
   margin: 10px;
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
   height: 200px;
   width: 200px;
   background-color: yellow;
@@ -79,4 +79,12 @@ input {
   width: 200px;
   color: black;
   background-color: lightblue;
+}
+
+#target {
+  height: 300px;
+  width: 300px;
+  background-color: grey;
+  margin: 10px;
+  border: 2px solid black;
 }
