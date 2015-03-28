@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pt4 - jQuery: jQuery UI - Accordion and Sortables</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+  <script src="js/jQuery_v1.11.2.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script>
+    console.log("File Running is: " + $("title").html());
+  </script>
+</head>
+<body>
+
+  <div id="list">
+    <ul>
+      <li>Pizza</li>
+      <li>Cheese</li>
+      <li>Tomatoes</li>
+      <li>Sausage</li>
+      <li>Pepperoni</li>
+    </ul>
+  </div>
+
+
+  <div id="accordion">
+    
+    <h3>Title</h3>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam molestias aliquid sapiente tempora iure eligendi laboriosam debitis quia pariatur. Amet ipsam, deleniti nesciunt rem voluptas. Corrupti, ex, inventore. Quaerat aspernatur, deserunt quis autem numquam vero iusto cupiditate fugit, rerum voluptatum!</p>
+    </div>
+
+    <h3>Title</h3>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam molestias aliquid sapiente tempora iure eligendi laboriosam debitis quia pariatur. Amet ipsam, deleniti nesciunt rem voluptas. Corrupti, ex, inventore. Quaerat aspernatur, deserunt quis autem numquam vero iusto cupiditate fugit, rerum voluptatum!</p>
+    </div>
+
+    <h3>Title</h3>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam molestias aliquid sapiente tempora iure eligendi laboriosam debitis quia pariatur. Amet ipsam, deleniti nesciunt rem voluptas. Corrupti, ex, inventore. Quaerat aspernatur, deserunt quis autem numquam vero iusto cupiditate fugit, rerum voluptatum!</p>
+    </div>
+
+    <h3>Title</h3>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam molestias aliquid sapiente tempora iure eligendi laboriosam debitis quia pariatur. Amet ipsam, deleniti nesciunt rem voluptas. Corrupti, ex, inventore. Quaerat aspernatur, deserunt quis autem numquam vero iusto cupiditate fugit, rerum voluptatum!</p>
+    </div>
+
+    <h3>Title</h3>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam molestias aliquid sapiente tempora iure eligendi laboriosam debitis quia pariatur. Amet ipsam, deleniti nesciunt rem voluptas. Corrupti, ex, inventore. Quaerat aspernatur, deserunt quis autem numquam vero iusto cupiditate fugit, rerum voluptatum!</p>
+    </div>
+
+  </div>
+
+  
+  <script>
+  $("ul").sortable();
+    $("#accordion").accordion();
+  </script>
+
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

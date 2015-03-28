@@ -88,3 +88,21 @@ input {
   margin: 10px;
   border: 2px solid black;
 }
+#list {
+  height: 300px;
+  width: 300px;
+  background-color: lightblue;
+}
+
+#list ul {
+  padding: 10px;
+}
+
+#list ul li {
+  list-style-type: none;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 5px;
+  margin: 15px 0 5px 0;
+  width: 80px;
+}
