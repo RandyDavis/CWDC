@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pt4 - jQuery: AJAX</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jQuery_v1.11.2.min.js"></script>
+</head>
+<body>
+
+  <h1>Asyncronous Javascript and XML</h1>
+  
+
+  <script>
+    // $.get("test.html", function(data) {
+    //   console.log(data);
+    // });
+
+    $.ajax({
+      url:"test.html"
+    }).done(function(data) {
+      $("h1").append(" " + data);
+    })
+
+  </script>
+
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
