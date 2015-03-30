@@ -17,34 +17,63 @@
     <div id="menuBar">
       <div id="brand">CodePlayer</div>
       <ul id="viewable">
-        <li class="selected">HTML</li>
-        <li>CSS</li>
-        <li>JS</li>
-        <li>Result</li>
+        <li class="toggle selected">HTML</li>
+        <li class="toggle">CSS</li>
+        <li class="toggle">JS</li>
+        <li class="toggle selected">Result</li>
       </ul>
       <div id="buttonDiv">
         <button id="runButton">Run</button>
       </div>
     </div>
 
-    <!-- <div class="pane" id="html">
-      <div><div class="paneButton" id="htmlButton">HTML</div></div>
-    </div>
-    <div class="pane" id="css">
-      <div><div class="paneButton" id="cssButton">CSS</div></div>
-    </div>
-    <div class="pane" id="js">
-      <div><div class="paneButton" id="jsButton">JS</div></div>
-    </div>
-    <div class="pane" id="result">
-            <div><div class="paneButton" id="resultButton">Result</div></div>
+  <div class="clear"></div>
 
-    </div> -->
+    <div class="codePane" id="HTMLContainer">
+      <div class="codeLabel">HTML</div>
+      <textarea name="" id="">Example Code</textarea>
+    </div>
+    <div class="codePane" id="CSSContainer">
+      <div class="codeLabel">CSS</div>
+      <textarea name="" id="">Example Code</textarea>
+    </div>
+    <div class="codePane" id="JSContainer">
+      <div class="codeLabel">JS</div>
+      <textarea name="" id="">Example Code</textarea>
+    </div>
+    <div class="codePane" id="result">
+      <div class="codeLabel">Result</div>
+      <iframe name="" id="">Example Code</iframe>
+    </div>
 
 
 
   </div>
 
+
+  <script>
+    var windowHeight = $(window).height();
+    var menuBarHeight = $("#menuBar").height();
+
+    var paneHeight = windowHeight - menuBarHeight;
+
+    $(".codePane").height(paneHeight + "px");
+
+    console.log("Window Height: " + windowHeight);
+    console.log("Menu Bar: " + menuBarHeight);
+    console.log("Pane Height: " + paneHeight);
+
+
+    $(".toggle").click(function() {
+      $(this).toggleClass("selected");
+
+      var activeDiv = $(this).html();
+      console.log(activeDiv);
+
+      $("#"+activeDiv+"Container").toggle();
+    });
+
+  </script>
 
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
