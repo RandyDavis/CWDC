@@ -31,19 +31,19 @@
 
     <div class="codePane" id="HTMLContainer">
       <div class="codeLabel">HTML</div>
-      <textarea name="" id="">Example Code</textarea>
+      <textarea name="" id="htmlCode"><div id="test"></div></textarea>
     </div>
     <div class="codePane" id="CSSContainer">
       <div class="codeLabel">CSS</div>
-      <textarea name="" id="">Example Code</textarea>
+      <textarea name="" id="cssCode">html {background-color: blue}</textarea>
     </div>
     <div class="codePane" id="JSContainer">
       <div class="codeLabel">JS</div>
-      <textarea name="" id="">Example Code</textarea>
+      <textarea name="" id="jsCode">document.getElementById("test").innerHTML="It's working!";</textarea>
     </div>
     <div class="codePane" id="ResultContainer">
       <div class="codeLabel">Result</div>
-      <iframe name="" id="">Example Code</iframe>
+      <iframe name="" id="resultFrame">Example Code</iframe>
     </div>
 
 
@@ -80,6 +80,15 @@
 
       $(".codePane").width(width + "%");
     });
+
+    $("#runButton").click(function() {
+      $("iframe").contents().find("html").html('<style>'+$("#cssCode").val()+ '</style>' + $("#htmlCode").val());
+      document.getElementById("resultFrame").contentWindow.eval($("#jsCode").val());
+    });
+
+
+
+    
 
   </script>
 
