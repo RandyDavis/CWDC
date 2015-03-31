@@ -41,7 +41,7 @@
       <div class="codeLabel">JS</div>
       <textarea name="" id="">Example Code</textarea>
     </div>
-    <div class="codePane" id="result">
+    <div class="codePane" id="ResultContainer">
       <div class="codeLabel">Result</div>
       <iframe name="" id="">Example Code</iframe>
     </div>
@@ -71,6 +71,14 @@
       console.log(activeDiv);
 
       $("#"+activeDiv+"Container").toggle();
+
+      var showingDivs = $(".codePane").filter(function() {
+        return($(this).css("display") !="none");
+      }).length;
+
+      var width = 100/showingDivs;
+
+      $(".codePane").width(width + "%");
     });
 
   </script>

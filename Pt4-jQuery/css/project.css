@@ -108,6 +108,7 @@ body {
   height: 100%;
   border: none;
   border-right: 1px solid grey;
+  box-sizing: border-box;
   font-family: monotype;
   font-size: 90%;
   padding: 15px 5px 5px 5px;
