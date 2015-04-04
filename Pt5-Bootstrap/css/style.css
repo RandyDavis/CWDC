@@ -6,3 +6,24 @@
 .large {
   font-size: 200%;
 }
+
+#div1 {
+  background-color: blue;
+}
+
+#div2 {
+  background-color: red;
+}
+
+#div3 {
+  background-color: green;
+}
+
+.contentDiv {
+  height: 800px;
+  color: white;
+}
+
+h1 {
+  margin-top: 60px;
+}
