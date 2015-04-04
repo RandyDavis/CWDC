@@ -1,0 +1,69 @@
+/**********************************************
+*                 PAGE STYLES
+**********************************************/
+
+body {
+  padding-top: 50px;
+  position: relative;
+}
+
+.navbar-fixed-top {
+  margin-bottom: 0;
+}
+
+
+/**********************************************
+*                LANDING PAGE STYLES
+**********************************************/
+.subsection {
+  min-height: 700px;
+  /*margin-top: 70px;*/
+  padding-top: 120px;
+  border-bottom: 1px solid #999;
+}
+#landing-hero {
+  background: url("../images/macbook_pro_desk.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 850px;
+}
+
+.subscribeEmail {
+  width: 25rem;
+  margin: 0 auto;
+}
+
+.subhead-space {
+  padding-top: 200px;
+}
+
+.skill {
+  /*box-sizing: border-box;*/
+  padding-right: 20px;
+}
+
+.skill-glyph {
+  margin-right: 5px;
+}
+
+.skill-content {
+  padding-left: 20px;
+}
+
+#html-glyph {
+  color: green;
+}
+
+#responsive-glyph {
+  color: purple;
+}
+
+#js-glyph {
+ color: red;
+}
+
+#projects {
+  background-color: #3498db;
+}
