@@ -1,0 +1,10 @@
+.navbar-brand {
+  font-size: 1.8em;
+}
+
+#top-container {
+  background-image: url("../images/flower-field.jpg");
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+}
